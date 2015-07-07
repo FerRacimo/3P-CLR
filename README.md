@@ -35,7 +35,9 @@ Note that all drifts are equal to time (in generations) divided by 2*Ne
 Location of file with LD weights (if available, otherwise NA): NA
 
 
-# Input columns (the header can be modified as needed)
+# Input columns 
+
+(The header can be modified as needed)
 
 column 1: Chromosome
 
