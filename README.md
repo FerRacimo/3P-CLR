@@ -28,7 +28,7 @@ Drift A: 0.086
 
 Drift B: 0.102
 
-Inner branch drift + outgroup branch drift: 0.17
+Drift C (Inner branch drift + outgroup branch drift): 0.17
 
 Note that all drifts are equal to time (in generations) divided by 2*Ne
 
@@ -57,11 +57,23 @@ column 8: Number of derived alleles in outgroup population C
 
 column 9: Number of sampled alleles in outgroup population C
 
-# NOTES: 
+# Notes: 
 
-Make sure that all SNPs are segregating in the outgroup population (they can be fixed derived, segregating or fixed ancestral in the two test populations, so long as they are segregating in the outgroup).
+When running 3P-CLR, make sure that all SNPs are segregating in the outgroup population (they can be fixed derived, segregating or fixed ancestral in the two test populations, so long as they are segregating in the outgroup).
 
-Make sure to use a single chromosome in each run (i.e. do not combine data from different chromosomes into the same input file)
+Also, make sure to use a single chromosome in each run (i.e. do not combine data from different chromosomes into the same input file)
+
+# Drift values
+
+3P-CLR requires the values of the drift times of the 3-population tree to be entered as input. Drift times are roughly equal to time in generations divided by twice the haploid effective population size. The program requires 3 drift times:
+
+1) The drift time leading from the common ancestor of A & B to node A (Drift A)
+
+2) The drift time leading from the common ancestor of A & B to node B (Drift B)
+
+3) The drift time leading from the common ancestor of A & B & C to node C, plus the drift time leading from the common ancestor of A & B & C to the common ancstor of A & B (Drift C)
+
+These drift times can be accurately calculated by using programs like MixMapper (Lipson et al. 2013). Alternatively, we provide an R script that uses dadi (Gutenkunst et al. 2009) and a likelihood optimization algorithm (L-BFGS-B) to obtain approximations to these drift times for a two-population tree. The program is located in the folder CalcDrifts. The user can use this script to obtain the drift times for each pair of populations in the 3-population tree.
 
 # Output columns
 
