@@ -2,7 +2,9 @@
 
 # To compile:
 cd src
+
 g++ main.cpp ASFfunc.cpp hcubature.c -std=c++0x -o threepclr
+
 cd ..
 
 # Example line for a test file
