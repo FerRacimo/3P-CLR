@@ -71,7 +71,7 @@ Also, make sure to use a single chromosome in each run (i.e. do not combine data
 
 2) The drift time leading from the common ancestor of A & B to node B (Drift B)
 
-3) The drift time leading from the common ancestor of A & B & C to node C, plus the drift time leading from the common ancestor of A & B & C to the common ancstor of A & B (Drift C)
+3) The drift time leading from the common ancestor of A, B & C to node C, plus the drift time leading from the common ancestor of A, B & C to the common ancestor of A & B (Drift C)
 
 These drift times can be accurately calculated by using programs like MixMapper (Lipson et al. 2013). Alternatively, we provide an R script that uses dadi (Gutenkunst et al. 2009) and a likelihood optimization algorithm (L-BFGS-B) to obtain approximations to these drift times for a two-population tree. The program is located in the folder CalcDrifts. The user can use this script to obtain the drift times for each pair of populations in the 3-population tree.
 
