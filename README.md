@@ -1,5 +1,10 @@
 # 3P-CLR
 
+3P-CLR is a method to detect positive selection in a three-population tree using patterns of linked allele frequency differentiation. It can distinguish selective events that occurred in the common ancestral population of the two most closely-related populations from those events that occurred in each of the populations after the split from each other.
+
+To learn more about the method, you can check out the following preprint:
+http://biorxiv.org/content/early/2015/05/12/017566.1
+
 # To compile:
 
 cd src
