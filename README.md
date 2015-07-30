@@ -68,8 +68,8 @@ When running 3P-CLR, make sure that all SNPs are segregating in the outgroup pop
 
 Also, make sure to use a single chromosome in each run (i.e. do not combine data from different chromosomes into the same input file).
 
-To obtain positions in genetic distance units, one can run programs like LDhat: https://github.com/auton1/LDhat
-It is best if the program is run only in the outgroup population.
+To obtain positions in genetic distance units, one can run programs like LDhat (https://github.com/auton1/LDhat).
+It is best if the genetic distance program is run only using the outgroup population.
 
 # Drift values
 
