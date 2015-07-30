@@ -66,7 +66,10 @@ column 9: Number of sampled alleles in outgroup population C
 
 When running 3P-CLR, make sure that all SNPs are segregating in the outgroup population (they can be fixed derived, segregating or fixed ancestral in the two test populations, so long as they are segregating in the outgroup).
 
-Also, make sure to use a single chromosome in each run (i.e. do not combine data from different chromosomes into the same input file)
+Also, make sure to use a single chromosome in each run (i.e. do not combine data from different chromosomes into the same input file).
+
+To obtain positions in genetic distance units, one can run programs like LDhat: https://github.com/auton1/LDhat
+It is best if the program is run only in the outgroup population.
 
 # Drift values
 
