@@ -1,0 +1,29 @@
+# Command-line arguments
+args <- commandArgs(trailingOnly = TRUE)
+# Name of file containing data
+infilename <- args[1]
+outfilename <- args[2]
+
+
+# Load data table
+table <- read.table(infilename,header=TRUE)
+
+
+
+
+tableAC <- table[which(table[,1] > 0 & table[,1] < table[,2]),c(1,2,5,6,7)]
+tableAB <- table[which(table[,1] > 0 & table[,1] < table[,2]),c(1,2,3,4,7)]
+
+
+
+
+
+driftA <- pointestAB[1]
+driftB <- pointestAB[2]
+driftC <- pointestAC[2] + (pointestAC[1] - pointestAB[1])
+
+alltitles <- "DriftA,DriftB,DriftC"
+alldrifts <- paste(c(driftA,driftB,driftC),collapse=",")
+
+write(alltitles,file=outfilename)
+write(alldrifts,file=outfilename,append=TRUE)
