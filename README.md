@@ -81,7 +81,7 @@ It is best if the genetic distance program is run only using the outgroup popula
 
 3) The drift time leading from the common ancestor of A, B & C to node C, plus the drift time leading from the common ancestor of A, B & C to the common ancestor of A & B (Drift C)
 
-These drift times can be accurately calculated by applying programs like MixMapper (Lipson et al. 2013) to genome-wide data, assuming selection is not prevalent enough in the genome to affect these estimates. Alternatively, we provide an R script that uses dadi (Gutenkunst et al. 2009) and a likelihood optimization algorithm (L-BFGS-B) to obtain approximations to these drift times. The program is located in the folder CalcDrifts3P.
+We provide two R scripts that can calculate these drift times, using either F3 statistcs (Felsenstein 1981, Patterson et al. 2012) or dadi (Gutenkunst et al. 2009). The scripts are located in the folders CalcDriftsF3 and CalcDriftsDadi3P.
 
 # Output columns
 
